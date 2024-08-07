@@ -59,6 +59,10 @@
             "entry": "GuildBattle"
         },
         {
+            "name": "公会奖励领取",
+            "entry": "GuildBattleReward"
+        },
+        {
             "name": "人形常规招募(抽到新装备还未测试)",
             "entry": "RegularHumanoidRecruitment",
             "option": [

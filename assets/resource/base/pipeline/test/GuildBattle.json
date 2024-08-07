@@ -1,0 +1,94 @@
+{
+    "GuildBattle": {
+        "recognition": "OCR",
+        "expected": "班组",
+        "action": "Click",
+        "next": [
+            "GuildBattleDustandSmoke"
+        ]
+    },
+    "GuildBattleDustandSmoke": {
+        "recognition": "OCR",
+        "expected": "尘烟前线",
+        "roi": [
+            1000,
+            500,
+            1280,
+            720
+        ],
+        "action": "Click",
+        "next": [
+            "GuildBattleStartCombat"
+        ]
+    },
+    "GuildBattleStartCombat": {
+        "recognition": "OCR",
+        "expected": "开始作战",
+        "action": "Click",
+        "next": [
+            "GuildBattleDustandSmokeNotAvailable",
+            "GuildBattleDustandSmokeAvailable"
+        ]
+    },
+    "GuildBattleDustandSmokeNotAvailable": {
+        "recognition": "OCR",
+        "expected": "今日的参战机会已用尽",
+        "next": [
+            "GuildBattleReward"
+        ]
+    },
+    "GuildBattleDustandSmokeAvailable": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "battleTask",
+            "GuildBattleStartCombat"
+        ]
+    },
+    "占位,重新开始作战直到用光票": {
+        "recognition": "OCR",
+        "expected": "xxxx",
+        "next": [
+            "GuildBattleStartCombat"
+        ]
+    },
+    "GuildBattleReward": {
+        "recognition": "OCR",
+        "expected": "前线补给",
+        "action": "Click",
+        "next": [
+            "GuildBattleRewardget",
+            "GuildBattleRewardGuild"
+        ]
+    },
+    "GuildBattleRewardget": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "action": "Click",
+        "next": [
+            "GuildBattleRewardClose",
+            "GuildBattleReward",
+            "backPage"
+        ]
+    },
+    "GuildBattleRewardGuild": {
+        "recognition": "OCR",
+        "roi": [
+            400,
+            200,
+            500,
+            50
+        ],
+        "expected": "班组表现",
+        "action": "Click",
+        "next": [
+            "GuildBattleRewardget"
+        ]
+    },
+    "GuildBattleRewardClose": {
+        "recognition": "OCR",
+        "expected": "点击空白处关闭",
+        "action": "Click"
+    }
+}
